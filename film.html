@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мій улюблений фільм</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ffecd2, #fcb69f);
+            background-size: cover;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #ff6347;
+            animation: fadeIn 2s;
+        }
+        p {
+            line-height: 1.6;
+            animation: fadeIn 2s;
+        }
+        img {
+            max-width: 300px;
+            height: auto;
+            display: block;
+            margin: 20px 0;
+            animation: fadeIn 2s;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin: auto;
+            animation: fadeIn 2s;
+        }
+        .trailer-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff6347;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            margin-top: 20px;
+            text-decoration: none;
+            animation: fadeIn 2s;
+        }
+        .trailer-button:hover {
+            background-color: #ff4500;
+        }
+        ul {
+            list-style-type: square;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        form {
+            margin-top: 20px;
+            animation: fadeIn 2s;
+        }
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .social-icons {
+            margin-top: 20px;
+            animation: fadeIn 2s;
+        }
+        .social-icons a {
+            margin-right: 10px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgb(0,0,0); 
+            background-color: rgba(0,0,0,0.4); 
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto; 
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; 
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Поворот не туди</h1>
+        <p>Американо-німецький фільм жаху з елементами трилера і слешера 2003 р., режисера Роба Шмідта і сценариста Алана Б. МакЕлроя. Перша частина однойменної франшизи про мутантів-канібалів.</p>
+        <img src="poster.jpg" alt="Плакат фільму">
+        
+        <h2>Актори та ролі</h2>
+        <ul>
+            <li>Джессіка Біль – Клариса</li>
+            <li>Джонатан Такер – Кріс Флінн</li>
+            <li>Десмонд Гаррінгтон – Скотт</li>
+        </ul>
+
+        <h2>Цікаві факти</h2>
+        <ul>
+            <li>Фільм знімався у Західній Вірджинії.</li>
+            <li>Бюджет фільму складав близько $12 мільйонів.</li>
+            <li>Сценарій був написаний за один місяць.</li>
+        </ul>
+        
+        <h2>Деталі фільму</h2>
+        <table>
+            <tr>
+                <th>Режисер</th>
+                <td>Роб Шмідт</td>
+            </tr>
+            <tr>
+                <th>Сценарист</th>
+                <td>Алан Б. МакЕлрой</td>
+            </tr>
+            <tr>
+                <th>Рік випуску</th>
+                <td>2003</td>
+            </tr>
+            <tr>
+                <th>Бюджет</th>
+                <td>$12 мільйонів</td>
+            </tr>
+        </table>
+        
+        <h2>Трейлер</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/трейлер" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        <h2>Зворотний зв'язок</h2>
+        <form>
+            <label for="name">Ім'я:</label>
+            <input type="text" id="name" name="name" placeholder="Ваше ім'я">
+
+            <label for="email">Електронна пошта:</label>
+            <input type="email" id="email" name="email" placeholder="Ваш email">
+
+            <label for="message">Повідомлення:</label>
+            <textarea id="message" name="message" placeholder="Ваше повідомлення" rows="4"></textarea>
+
+            <input type="submit" value="Надіслати">
+        </form>
+
+        <div class="social-icons">
+            <h2>Поділіться сторінкою</h2>
+            <a href="https://facebook.com" target="_blank"><img src="facebook-icon.png" alt="Facebook" width="32"></a>
+            <a href="https://twitter.com" target="_blank"><img src="twitter-icon.png" alt="Twitter" width="32"></a>
+            <a href="https://instagram.com" target="_blank"><img src="instagram-icon.png" alt="Instagram" width="32"></a>
+        </div>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">1
+                <span class="close">&times;</span>
+                <p>Додаткова інформація про фільм або велике зображення.</p>
+                <img src="large-image.jpg" alt="Велике зображення" style="width:100%">
+            </div>
+        </div>
+
+        <!-- Trigger/Open The Modal -->
+        <button id="myBtn">Відкрити модальне вікно</button>
+    </div>
+
+    <script>
+        var modal = document.getElementById("myModal");
+        var btn = document.getElementById("myBtn");
+        var span = document.getElementsByClassName("close")[0];
+
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
